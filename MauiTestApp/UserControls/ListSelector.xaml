@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView x:Class="MauiTestApp.UserControls.ListSelector" xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <ContentView.Resources>
+        <Style x:Key="UnselectedGridStyle" TargetType="Grid">
+            <Setter Property="BackgroundColor" Value="{StaticResource DarkBackgroundColor}" />
+        </Style>
+        <Style x:Key="SelectedGridStyle" TargetType="Grid">
+            <Setter Property="BackgroundColor" Value="{StaticResource StandardBackgroundColor}" />
+        </Style>
+
+        <Style x:Key="UnselectedButtonStyle" TargetType="Button">
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="TextColor" Value="{StaticResource Gray100}" />
+        </Style>
+        <Style x:Key="SelectedButtonStyle" TargetType="Button">
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="TextColor" Value="{StaticResource White}" />
+        </Style>
+
+    </ContentView.Resources>
+
+    <Grid x:Name="theGrid" Margin="2"
+          ColumnDefinitions="40,*"
+          Style="{StaticResource UnselectedGridStyle}">
+        <Button x:Name="button" Grid.Column="1"
+                BackgroundColor="Transparent"
+                HorizontalOptions="Start"
+                Style="{StaticResource UnselectedButtonStyle}" />
+    </Grid>
+
+</ContentView>

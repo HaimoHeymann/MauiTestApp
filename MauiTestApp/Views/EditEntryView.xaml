@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="MauiTestApp.Views.EditEntryView"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:uc="clr-namespace:MauiTestApp.UserControls"
+             Title="Maui Test App" Loaded="OnLoaded">
+
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsVisible="False" />
+    </Shell.BackButtonBehavior>
+
+    <ContentPage.Resources>
+        <Style x:Key="ControlBorderStyle" TargetType="Border">
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="Stroke" Value="{StaticResource Green200}" />
+            <Setter Property="StrokeThickness" Value="1" />
+        </Style>
+    </ContentPage.Resources>
+
+    <Grid BackgroundColor="{StaticResource Secondary}" RowDefinitions="*,60,50">
+        <Border Grid.Row="0" Margin="10" Style="{StaticResource ControlBorderStyle}">
+            <ScrollView>
+                <VerticalStackLayout x:Name="mainStack">
+                </VerticalStackLayout>
+            </ScrollView>
+        </Border>
+
+        <!--  buttons  -->
+        <Grid Grid.Row="1" BackgroundColor="{StaticResource Secondary}" ColumnDefinitions="*,*">
+            <Button Grid.Column="0" Margin="10,0,5,0" Text="Cancel">
+            </Button>
+            <Button Grid.Column="1" Margin="5,0,10,0" Text="Okay">
+            </Button>
+        </Grid>
+
+    </Grid>
+</ContentPage>
