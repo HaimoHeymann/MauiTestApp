@@ -7,5 +7,5 @@ On iOS the lower part of the list is empty, not shown -> incorrect
 
 Alternative:
 When the VerticalStackLayout is replaced by a CollectionView, the items are shown correct
-In order to sea the example with CollectionView, change the ContentTemplate to 'UseCollectionView' in AppShell.xaml
+In order to see the example with CollectionView, change the ContentTemplate to 'UseCollectionView' in AppShell.xaml
 
